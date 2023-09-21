@@ -1,0 +1,29 @@
+﻿@model List<ProductCartViewModel>
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Cart's details</h2>
+<hr />
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Product Image</th>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>Product Amount</th>
+    </tr>
+    @foreach (var productCart in Model)
+    {
+        <tr>
+            <td><img src="/Images/@productCart.ProductImage" style="width: 75px; height: 75px;" /></td>
+            <td>@productCart.ProductName</td>
+            <td>@productCart.ProductPrice</td>
+            <td>@productCart.AmountOfProduct</td>
+        </tr>
+    }
+</table>
+<a asp-action="CartHistory" asp-controller="Cart" class="btn btn-dark">Back To carts table</a>
+
+

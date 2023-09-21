@@ -1,0 +1,40 @@
+﻿@model List<ProductViewModel>
+
+<!-- For all card  -->
+<!-- Cards -->
+
+<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+    @foreach (var product in Model)
+    {
+
+        var id = "ProductCard" + product.Id;
+
+        <div class="col mb-5">
+            <a asp-action="Details" asp-controller="Product" asp-route-id="@product.Id" asp-route-categoryId="@ViewBag.CategoryId" class="card-link" style="text-decoration: none;color: black;">
+                <div id="@id" class="card h-100 enlarge-on-hover">
+                    <img class="card-img-top" src="/Images/@product.Image" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">@product.Name</h5>
+                            <!-- Product price-->
+                            <span>$@product.Price</span>
+@*                            <span>Q:@product.StockQuantity</span>
+*@                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        if (User.IsInRole(Roles.Customer))
+                        {
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" onclick="addToCart('@product.Id' , cartTotal)">Add to cart</a></div>
+                            </div>
+                        }
+                    }
+                </div>
+            </a>
+        </div>
+    }
+</div>

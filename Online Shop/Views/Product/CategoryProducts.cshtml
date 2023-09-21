@@ -1,0 +1,38 @@
+﻿@model List<ProductViewModel>
+
+@{
+    ViewData["Title"] = "CategoryProducts";
+}
+
+<h2>Category Products</h2>
+<hr />
+
+
+<a asp-action="Index" asp-controller="Category" class="btn btn-dark mb-3">Back to category table</a>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Stock Quantity</th>
+        <th>Seller Name</th>
+        <th>Is Active</th>
+        <th>Insertion Date</th>
+
+    </tr>
+    @foreach (var product in Model)
+    {
+        <tr>
+            <td><img src="/Images/@product.Image" style="width: 75px; height: 75px;" /></td>
+            <td>@product.Name</td>
+            <td>@product.Price</td>
+            <td>@product.StockQuantity</td>
+            <td>@product.SellerName</td>
+            <td class="text-center">
+                <input class="form-check-input" type="checkbox" @(product.IsActive ? "checked" : "")>
+            </td>
+            <td>@product.InsertionDate</td>
+        </tr>
+    }
+</table>

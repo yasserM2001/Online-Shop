@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Online Shop</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="/css/OnlineShopStyles.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navigation-->
+    <partial name="_NavPartial" />
+    <!-- Header-->
+    @**@
+    <!-- Section-->
+    <section class="py-0 custom-section">
+        <div class="container px-4 px-lg-5 mt-5">
+            @RenderBody()
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="py-4 bg-dark">
+        <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Online Shop 2023</p></div>
+    </footer>
+
+    <!-- Core theme JS-->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap core JS-->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <partial name="_ValidationScriptsPartial"></partial>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+
+

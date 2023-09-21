@@ -1,0 +1,341 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Online Shop.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Online Shop.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\Images\\006f7283-f09b-4fba-946b-8f055041ef53_orange_juice.jpg",
+      "PackagePath": "staticwebassets\\Images\\006f7283-f09b-4fba-946b-8f055041ef53_orange_juice.jpg"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\Images\\141022ad-b82d-46b9-a3d5-75d420d5d696_tree-top-juice-organic-8oz-box.png",
+      "PackagePath": "staticwebassets\\Images\\141022ad-b82d-46b9-a3d5-75d420d5d696_tree-top-juice-organic-8oz-box.png"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\Images\\1b99ee91-3fd7-48a7-bc46-c561d1f2801e_tree-top-juice-organic-8oz-box.png",
+      "PackagePath": "staticwebassets\\Images\\1b99ee91-3fd7-48a7-bc46-c561d1f2801e_tree-top-juice-organic-8oz-box.png"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\Images\\447a4234-a703-425a-a818-d4f845d6737c_orange_juice.jpg",
+      "PackagePath": "staticwebassets\\Images\\447a4234-a703-425a-a818-d4f845d6737c_orange_juice.jpg"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\Images\\571fc0a4-2e6c-4852-afd7-5b95c2a5e33e_tree-top-juice-organic-8oz-box.png",
+      "PackagePath": "staticwebassets\\Images\\571fc0a4-2e6c-4852-afd7-5b95c2a5e33e_tree-top-juice-organic-8oz-box.png"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\Images\\Iphone13-blue.jpeg",
+      "PackagePath": "staticwebassets\\Images\\Iphone13-blue.jpeg"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\Images\\Iphone14ProMax.jpeg",
+      "PackagePath": "staticwebassets\\Images\\Iphone14ProMax.jpeg"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\Images\\Lenovo Ideapad 1.jpeg",
+      "PackagePath": "staticwebassets\\Images\\Lenovo Ideapad 1.jpeg"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\Images\\Online-Shopping-Icon.png",
+      "PackagePath": "staticwebassets\\Images\\Online-Shopping-Icon.png"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\Images\\Samsung-Galaxy-A14.jpeg",
+      "PackagePath": "staticwebassets\\Images\\Samsung-Galaxy-A14.jpeg"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\Images\\Samsung-Series-8.png",
+      "PackagePath": "staticwebassets\\Images\\Samsung-Series-8.png"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\Images\\black-shopping-cart-icon.png",
+      "PackagePath": "staticwebassets\\Images\\black-shopping-cart-icon.png"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\Images\\iphone14.jpg",
+      "PackagePath": "staticwebassets\\Images\\iphone14.jpg"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\Images\\samsung-43-4k-smart-led-tv.jpg",
+      "PackagePath": "staticwebassets\\Images\\samsung-43-4k-smart-led-tv.jpg"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\assets\\favicon.ico",
+      "PackagePath": "staticwebassets\\assets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\css\\OnlineShopStyles.css",
+      "PackagePath": "staticwebassets\\css\\OnlineShopStyles.css"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\css\\OnlineShopStyles2.css",
+      "PackagePath": "staticwebassets\\css\\OnlineShopStyles2.css"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\js\\OnlineShopScripts.js",
+      "PackagePath": "staticwebassets\\js\\OnlineShopScripts.js"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\js\\OnlineShopScripts2.js",
+      "PackagePath": "staticwebassets\\js\\OnlineShopScripts2.js"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\FINAL PROJECT\\OnlineShop\\Online Shop\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Online Shop.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Online Shop.props",
+      "PackagePath": "build\\Online Shop.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Online Shop.props",
+      "PackagePath": "buildMultiTargeting\\Online Shop.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Online Shop.props",
+      "PackagePath": "buildTransitive\\Online Shop.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

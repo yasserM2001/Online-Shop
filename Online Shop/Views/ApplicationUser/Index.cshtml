@@ -1,0 +1,154 @@
+﻿@model List<ApplicationUserViewModel>
+
+@{
+    ViewData["Title"] = "Users";
+}
+@if (ViewBag.Sellers == true)
+{
+    <h2>Sellers</h2>
+    <hr />
+    <button onclick="NewSeller()" class="btn btn-dark mb-3">Add New Seller</button>
+}
+else
+{
+    <h2>Users</h2>
+    <hr />
+}
+
+
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Is Active</th>
+        <th colspan="4">Options</th>
+    </tr>
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.UserName</td>
+            <td>@user.Email</td>
+            <td class="text-center">
+                <input class="form-check-input" type="checkbox" @(user.IsActive ? "checked" : "")>
+            </td>
+            @if (ViewBag.Sellers == false)
+            {
+                <td class="text-center"><button onclick="EditUser('@user.Id')" class="btn btn-dark">Edit</button></td>
+            }
+            @if (ViewBag.Sellers == true)
+            {
+                <td class="text-center">
+                    @if (!(user.UserName.ToLower() == Roles.Admin.ToLower()))
+                    {
+                        if (user.IsActive)
+                        {
+                            <button onclick="UserActivation('@user.Id')" class="btn btn-danger">Deactivate</button>
+                        }
+                        else
+                        {
+                            <button onclick="UserActivation('@user.Id')" class="btn btn-success">Activate</button>
+
+                        }
+                    }
+                </td>
+            }
+            @if (ViewBag.Sellers == false)
+            {
+                <td class="text-center">
+                    <button onclick="ChangePassword('@user.Id')" type="button" class="btn btn-warning ">Change Password</button>
+                </td>
+            }
+        </tr>
+    }
+</table>
+
+
+<div class="modal" id="ModalPopUp">
+    <div class="modal-dialog">
+        <div id="ModalContent" class="modal-content">
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+
+        function CloseModal() {
+            $("#ModalPopUp").hide();
+        }
+
+        function NewSeller() {
+            $.ajax(
+                {
+                    url: "/ApplicationUser/New",
+                    type: "GET",
+                    success: function (result) {
+                        $("#ModalContent").html(result);
+                        var form = document.getElementById("NewSellerForm");
+                        $(form).removeData("validator")
+                            .removeData("unobtrusiveValidation");
+                        $.validator.unobtrusive.parse(form);
+                        $("#ModalPopUp").show();
+                    }
+                }
+            )
+        }
+
+        function EditUser(userId) {
+            $.ajax(
+                {
+                    url: "/ApplicationUser/Edit",
+                    type: "GET",
+                    data: { userId: userId },
+                    success: function (result) {
+                        $("#ModalContent").html(result);
+                        var form = document.getElementById("EditUserForm");
+                        $(form).removeData("validator")
+                            .removeData("unobtrusiveValidation");
+                        $.validator.unobtrusive.parse(form);
+                        $("#ModalPopUp").show();
+                    }
+                }
+            )
+        }
+
+        function UserActivation(userId) {
+            $.ajax(
+                {
+                    url: "/ApplicationUser/Activation",
+                    type: "GET",
+                    data: { userId: userId },
+                    success: function (result) {
+                        $("#ModalContent").html(result);
+                        var form = document.getElementById("ActivationForm");
+                        $(form).removeData("validator")
+                            .removeData("unobtrusiveValidation");
+                        $.validator.unobtrusive.parse(form);
+                        $("#ModalPopUp").show();
+                    }
+                }
+            )
+        }
+
+        function ChangePassword(userId) {
+            $.ajax(
+                {
+                    url: "/ApplicationUser/ChangePassword",
+                    type: "GET",
+                    data: { userId: userId },
+                    success: function (result) {
+                        $("#ModalContent").html(result);
+                        var form = document.getElementById("ChangePasswordForm");
+                        $(form).removeData("validator")
+                            .removeData("unobtrusiveValidation");
+                        $.validator.unobtrusive.parse(form);
+                        $("#ModalPopUp").show();
+                    }
+                }
+            )
+        }
+
+    </script>
+}
+

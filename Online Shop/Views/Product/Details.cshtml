@@ -1,0 +1,67 @@
+﻿@model ProductViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div class="card bg-light m-3" style="width:400px">
+    <img class="card-img-top" src="/Images/@Model.Image" alt="Card image" style="width:100%">
+    <div class="card-body">
+        <h3 class="card-title">@Model.Name</h3>
+        <h4 class="card-title">$@Model.Price</h4>
+        <p class="card-text">@Model.Description</p>
+        <h5 class="card-title">In Stock : @Model.StockQuantity</h5>
+
+        <a asp-action="Index" asp-controller="Product" asp-route-categoryId="@ViewBag.CategoryId" class="btn btn-danger">Back to List</a>
+        @if (User.Identity.IsAuthenticated)
+        {
+            if (User.IsInRole(Roles.Customer))
+            {
+                <a class="btn btn-outline-dark mt-auto" onclick="addToCart('@Model.Id' , cartTotal)">Add to cart</a>
+            }
+        }
+    </div>
+</div>
+
+<div class="modal" id="ModalPopUp">
+    <div class="modal-dialog">
+        <div id="ModalContent" class="modal-content">
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        function addToCart(productId, buttonElement) {
+            $.ajax({
+                url: "/Cart/AddToCart",
+                type: "POST",
+                data: { productId: productId },
+                success: function (response) {
+
+                    $("#ModalContent").html(response);
+                    var form = document.getElementById("AddToCartForm");
+                    $(form).removeData("validator")
+                        .removeData("unobtrusiveValidation");
+                    $.validator.unobtrusive.parse(form);
+                    $("#ModalPopUp").show();
+
+                    $.ajax({
+                        url: "/Cart/UpdateCartPrice",
+                        type: "POST",
+                        success: function (result) {
+                            $(buttonElement).text("$ " + result.newPrice.toFixed(2));
+                        },
+                        error: function () {
+                            alert("An error occurred while updating cart total price.");
+                        }
+                    });
+                },
+                error: function () {
+                    alert("An error occurred while adding the product to the cart.");
+                }
+            });
+        }
+    </script>
+}

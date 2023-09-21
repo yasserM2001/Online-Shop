@@ -1,0 +1,32 @@
+﻿@model ApplicationUserViewModel
+
+<!-- Modal Header -->
+<div id="headerContent" class="modal-header">
+    <h4 class="modal-title">
+        Deactivate User
+    </h4>
+    <button type="button" class="btn-close" onclick="CloseModal()"></button>
+</div>
+
+<!-- Modal body -->
+<div id="ModalBody" class="modal-body">
+    <form id="ActivationForm" method="post" asp-action="Activation" asp-controller="ApplicationUser">
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="UserName" />
+        <input type="hidden" asp-for="Email" />
+        <input type="hidden" asp-for="IsActive" />
+        <input type="hidden" name="viewName" value="@ViewBag.viewName" />
+        @if (Model.IsActive)
+        {
+            <p>Are you sure you want to deactivate this user (@Model.UserName)?</p>
+        }
+        else
+        {
+            <p>Are you sure you want to activate this user (@Model.UserName)?</p>
+        }
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" onclick="CloseModal()">Close</button>
+            <button type="submit" class="btn btn-dark">Okay</button>
+        </div>
+    </form>
+</div>

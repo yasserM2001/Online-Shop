@@ -1,0 +1,50 @@
+﻿@model bool
+
+<!-- Modal Header -->
+<div id="headerContent" class="modal-header">
+    <h4 class="modal-title">
+        Cart
+    </h4>
+    <button type="button" class="btn-close" onclick="CloseModal()"></button>
+</div>
+<!-- Modal body -->
+<div id="ModalBody" class="modal-body">
+    <form id="AddToCartForm">
+        @if (Model)
+        {
+            <p>Product Added successfully to the cart</p>
+        }
+        else
+        {
+            <p>Product can't be added to cart (Out of stock)</p>
+        }
+        <!-- Add other fields as needed -->
+        <div class="modal-footer">
+            <button onclick="CloseModal()" class="btn btn-dark">Ok</button>@*onclick="UpdateProducts()"*@@*type="submit"*@
+        </div>
+    </form>
+    @**@
+</div>
+
+
+@section Scripts{
+
+    <script>
+
+        function UpdateProducts() {
+
+            $.ajax({
+                url: "/Product/UpdateProducts",
+                type: "POST",
+                success: function (result) {
+                    $("#Cards").html(result);
+                },
+                error: function () {
+                    alert("An error occurred while updating products.");
+                }
+            });
+        }
+
+    </script>
+
+}

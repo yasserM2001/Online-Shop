@@ -1,0 +1,40 @@
+﻿@model List<CartViewModel>
+
+@{
+    ViewData["Title"] = "CartHistory";
+}
+
+<h2>History</h2>
+<hr />
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Purchasing Date</th>
+        <th>Total Price</th>
+        <th>Status</th>
+        <th>Details</th>
+    </tr>
+    @foreach (var cart in Model)
+    {
+        <tr>
+            <td>@cart.PurchasingDate</td>
+            <td>@cart.CartTotalPrice</td>
+            <td>
+
+                @if (cart.CartStatusId == Statuses.InProgressValue)
+                {
+                    <p style="color: green;">@Statuses.InProgress</p>
+                }
+                else if (cart.CartStatusId == Statuses.CompletedValue)
+                {
+                    <p style="color: red;">@Statuses.Completed</p>
+                }
+            </td>
+            <td>
+                <a asp-action="Details" asp-controller="Cart" asp-route-id="@cart.Id" class="btn btn-dark">Details</a>
+            </td>
+        </tr>
+    }
+</table>
+<a asp-action="Index" asp-controller="Cart" class="btn btn-dark">Back To current cart</a>
+

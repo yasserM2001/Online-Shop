@@ -1,0 +1,57 @@
+﻿@model LoginUserViewModel
+
+@{
+    ViewData["Title"] = "RequestToBeSeller";
+}
+
+<head>
+    <style>
+        .divider:after,
+        .divider:before {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #eee;
+        }
+
+        .h-custom {
+            height: calc(100% - 73px);
+        }
+    </style>
+</head>
+
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-75">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img src="/Images/black-shopping-cart-icon.png"
+                     class="img-fluid" alt="Sample image">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                <h2>Request To Be Seller</h2>
+                <hr />
+                <form asp-action="RequestToBeSeller" asp-controller="Account">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <!-- Username input -->
+                    <div class="form-outline mb-4">
+                        <input asp-for="UserName" class="form-control form-control-lg"
+                               placeholder="Enter a valid username" />
+                        <label class="form-label" for="form3Example3" asp-for="UserName"></label>
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+                    <input type="hidden" asp-for="Password" />
+                    <input type="hidden" asp-for="RememberMe" />
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                        <button type="submit" class="btn btn-dark btn-lg"
+                                style="padding-left: 2.5rem; padding-right: 2.5rem;">
+                            Request to be seller
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+

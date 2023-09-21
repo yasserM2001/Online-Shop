@@ -1,0 +1,129 @@
+﻿@model List<ProductViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    string productsTitle = "All Products";
+    int categoryId = ViewBag.CategoryId;
+}
+
+<div class="input-group mb-3">
+    <input type="text" class="form-control me-1" id="searchInput" placeholder="Search products..." onchange="searchProducts()">
+    <div class="input-group-append">
+        <button class="btn btn-outline-dark me-1" type="button" onclick="searchProducts()">Search</button>
+    </div>
+</div>
+
+
+<div class="btn-group" role="group" aria-label="Select Category">
+    <select class="btn btn-dark dropdown-toggle m-2" data-toggle="dropdown" onchange="redirectToIndex(this.value)">
+        @if (ViewBag.CategoryId == 0)
+        {
+            <option value="@Url.Action("Index", "Product", new { categoryId = 0 })" selected>--- All Categories ---</option>
+        }
+        else
+        {
+            <option value="@Url.Action("Index", "Product", new { categoryId = 0 })">--- All Categories ---</option>
+        }
+        @foreach (CategoryViewModel item in ViewBag.Categories)
+        {
+            if (ViewBag.CategoryId == item.Id)
+            {
+                <option value="@Url.Action("Index", "Product", new { categoryId = item.Id })" selected>@item.Name</option>
+                productsTitle = item.Name;
+            }
+            else
+            {
+                <option value="@Url.Action("Index", "Product", new { categoryId = item.Id })">@item.Name</option>
+            }
+        }
+    </select>
+    @if (User.IsInRole(Roles.Seller))
+    {
+        <a class="btn btn-dark m-2" type="button" asp-action="SellerProducts" asp-controller="Product">
+            Your Products
+        </a>
+    }
+</div>
+
+
+<h2>@productsTitle</h2>
+<hr />
+
+<!-- For all card  -->
+<!-- Cards -->
+<div id="Cards">
+    <partial name="_ProductCardPartial" model="@Model" />
+</div>
+
+<div class="modal" id="ModalPopUp">
+    <div class="modal-dialog">
+        <div id="ModalContent" class="modal-content">
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+
+        function CloseModal() {
+            $("#ModalPopUp").hide();
+        }
+
+        function redirectToIndex(url) {
+            if (url !== "0") {
+                window.location.href = url;
+            }
+        }
+
+        function addToCart(productId, buttonElement) {
+            $.ajax({
+                url: "/Cart/AddToCart",
+                type: "POST",
+                data: { productId: productId },
+                success: function (result) {
+
+                    $("#ModalContent").html(result);
+                    var form = document.getElementById("AddToCartForm");
+                    $(form).removeData("validator")
+                        .removeData("unobtrusiveValidation");
+                    $.validator.unobtrusive.parse(form);
+                    $("#ModalPopUp").show();
+
+                    $.ajax({
+                        url: "/Cart/UpdateCartPrice",
+                        type: "POST",
+                        success: function (result) {
+                            $(buttonElement).text("$ " + result.newPrice.toFixed(2));
+                            
+                        },
+                        error: function () {
+                            alert("An error occurred while updating cart total price.");
+                        }
+                    });
+                },
+                error: function () {
+                    alert("An error occurred while adding the product to the cart.");
+                }
+            });
+        }
+
+        function searchProducts() {
+            var searchQuery = $("#searchInput").val();
+
+            // Make an AJAX request to retrieve filtered products based on the search query
+            $.ajax({
+                url: "/Product/Search?categoryId=@ViewBag.CategoryId", 
+                type: "GET",
+                data: { query: searchQuery },
+                success: function (result) {
+                    // Update the product list with the filtered data
+                    $("#Cards").html(result);
+                },
+                error: function () {
+                    alert("An error occurred while searching for products.");
+                }
+            });
+        }
+
+    </script>
+}

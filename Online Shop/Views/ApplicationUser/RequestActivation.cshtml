@@ -1,0 +1,53 @@
+﻿@model ApplicationUserViewModel
+
+@{
+    ViewData["Title"] = "RequestActivation";
+}
+
+<head>
+    <style>
+        .divider:after,
+        .divider:before {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #eee;
+        }
+
+        .h-custom {
+            height: calc(100% - 73px);
+        }
+    </style>
+</head>
+
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-75">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img src="/Images/black-shopping-cart-icon.png"
+                     class="img-fluid" alt="Sample image">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                <h2>Request Activation</h2>
+                <hr />
+                <form asp-action="RequestActivation" asp-controller="ApplicationUser" method="post">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <input type="hidden" asp-for="Id" />
+                    <input type="hidden" asp-for="UserName" />
+                    <input type="hidden" asp-for="Password" />
+                    <input type="hidden" asp-for="Email" />
+                    <input type="hidden" asp-for="IsActive" />
+                    <input type="hidden" asp-for="RequestActivation" />
+                    <p style="font-size: 18px; margin-bottom: 10px;">Request activation from admin?</p>
+                    <div style="margin-top: 10px;">
+                        <button type="submit" class="btn btn-dark">Yes</button>
+                        <a href="/Account/Login" type="button" class="btn btn-danger">No</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+

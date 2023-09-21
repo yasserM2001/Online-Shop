@@ -1,0 +1,70 @@
+﻿@model ProductViewModel
+
+@{
+    SelectList categoriesList =
+    new SelectList(Model.Categories,
+        nameof(CategoryViewModel.Id),
+        nameof(CategoryViewModel.Name));
+}
+
+<!-- Modal Header -->
+<div class="modal-header">
+    <h4 class="modal-title">
+        Edit Product
+    </h4>
+    <button type="button" class="btn-close" onclick="CloseModal()"></button>
+</div>
+
+<!-- Modal body -->
+<div class="modal-body">
+    <form id="EditProductForm" enctype="multipart/form-data" asp-action="Edit" asp-controller="Product">
+        <div class="mb-3 mt-3">
+            <label asp-for="Name"></label>
+            <input class="form-control" placeholder="Enter name" asp-for="Name">
+            <span class="text-danger" asp-validation-for="Name"></span>
+        </div>
+        @*<div class="mb-3">
+            <label asp-for="ImageFile"></label>
+            <input class="form-control" placeholder="Enter image URL" asp-for="ImageFile">
+            <span class="text-danger" asp-validation-for="ImageFile"></span>
+        </div>*@
+        <div class="mb-3">
+            <label asp-for="ExpiryDate"></label>
+            <input class="form-control" type="datetime-local" placeholder="Enter expiry date" asp-for="ExpiryDate">
+            <span class="text-danger" asp-validation-for="ExpiryDate"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Price"></label>
+            <input class="form-control" type="number" placeholder="Enter price" asp-for="Price">
+            <span class="text-danger" asp-validation-for="Price"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Description"></label>
+            <textarea class="form-control" placeholder="Enter description" asp-for="Description"></textarea>
+            <span class="text-danger" asp-validation-for="Description"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="StockQuantity"></label>
+            <input class="form-control" type="number" placeholder="Enter stock quantity" asp-for="StockQuantity">
+            <span class="text-danger" asp-validation-for="StockQuantity"></span>
+        </div>
+        <div class="mb-3">
+            <select class="form form-control" asp-for="CategoryId" asp-items="categoriesList">
+@*                <option value="0">--- Select Category ---</option>
+*@            </select>
+            <span class="text-danger" asp-validation-for="CategoryId"></span>
+        </div>
+
+        <input type="hidden" asp-for="IsActive" value="true" />
+        <input type="hidden" asp-for="SellerId" />
+        <input type="hidden" asp-for="Image" />
+        <input type="hidden" asp-for="Id" />
+
+        <div asp-validation-summary="All"></div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" onclick="CloseModal()">Close</button>
+            <button type="submit" class="btn btn-dark">Save</button>
+        </div>
+    </form>
+</div>

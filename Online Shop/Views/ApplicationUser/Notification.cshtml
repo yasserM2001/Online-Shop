@@ -1,0 +1,91 @@
+﻿@model List<ApplicationUserViewModel>
+
+@{
+    ViewData["Title"] = "Notification";
+    int index = 0;
+}
+
+<h2>Notifications</h2>
+<hr />
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th></th>
+        <th>UserName</th>
+        <th>Notification</th>
+        <th colspan="2">Options</th>
+    </tr>
+    @foreach (var user in Model)
+    {
+        index++;
+        <tr>
+            <td>@index</td>
+            <td class="lead fw-normal mb-2">@user.UserName</td>
+            <td>
+                @if (user.RequestActivation)
+                {
+                    <p class="lead fw-normal mb-2">This user requested to be activated</p>
+                }
+                else if (user.RequestToBeSeller)
+                {
+                    <p class="lead fw-normal mb-2">This user requested to be a seller</p>
+                }
+                else if (user.RequestChangePaswword)
+                {
+                    <p class="lead fw-normal mb-2">This user requested reset his password</p>
+                }
+            </td>
+            @if (user.RequestActivation)
+            {
+                <td><a class="btn btn-dark" asp-action="NotificationActivationReply" asp-controller="ApplicationUser" asp-route-userId="@user.Id" asp-route-accept="true">Accept</a></td>
+                <td><a class="btn btn-danger" asp-action="NotificationActivationReply" asp-controller="ApplicationUser" asp-route-userId="@user.Id" asp-route-accept="false">Decline</a></td>
+            }
+            else if (user.RequestToBeSeller)
+            {
+                <td><a class="btn btn-dark" asp-action="NotificationBeSellerReply" asp-controller="ApplicationUser" asp-route-userId="@user.Id" asp-route-accept="true">Accept</a></td>
+                <td><a class="btn btn-danger" asp-action="NotificationBeSellerReply" asp-controller="ApplicationUser" asp-route-userId="@user.Id" asp-route-accept="false">Decline</a></td>
+
+            }
+            else if (user.RequestChangePaswword)
+            {
+                <td colspan="2" class="text-center"><a class="btn btn-warning" onclick="ChangePassword('@user.Id', 'Notification')">Reset Password</a></td>
+            }
+        </tr>
+    }
+</table>
+
+<div class="modal" id="ModalPopUp">
+    <div class="modal-dialog">
+        <div id="ModalContent" class="modal-content">
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <script>
+
+        function CloseModal() {
+            $("#ModalPopUp").hide();
+        }
+
+        function ChangePassword(userId,viewName) {
+            $.ajax(
+                {
+                    url: "/ApplicationUser/ChangePassword?returnViewName="+viewName,
+                    type: "GET",
+                    data: { userId: userId },
+                    success: function (result) {
+                        $("#ModalContent").html(result);
+                        var form = document.getElementById("ChangePasswordForm");
+                        $(form).removeData("validator")
+                            .removeData("unobtrusiveValidation");
+                        $.validator.unobtrusive.parse(form);
+                        $("#ModalPopUp").show();
+                    }
+                }
+            )
+        }
+
+    </script>
+}
